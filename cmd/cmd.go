@@ -20,6 +20,7 @@ func initAll() {
 	initVersion()
 	initMd5()
 	initTime()
+	initBase64()
 }
 
 func Execute() {
@@ -28,4 +29,12 @@ func Execute() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+}
+
+func printRes(data any, err error) {
+	if err != nil {
+		println(err.Error())
+		return
+	}
+	fmt.Printf("%+v\n", data)
 }

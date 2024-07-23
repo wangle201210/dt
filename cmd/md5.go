@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
 	"github.com/wangle201210/dt/sdk/md5"
 )
@@ -18,7 +17,7 @@ var md5Cmd = &cobra.Command{
 		if len(md5Src) == 0 && len(args) > 0 {
 			md5Src = args[0]
 		}
-		fmt.Println(md5.Md5(md5Src, md5Salt, md5Length))
+		printRes(md5.Md5(md5Src, md5Salt, md5Length), nil)
 	},
 }
 
