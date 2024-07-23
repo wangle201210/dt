@@ -37,12 +37,7 @@ var dateCmd = &cobra.Command{
 		if len(timeStr) == 0 && len(args) > 0 {
 			timeStr = args[0]
 		}
-		res, err := time.ToTimestamp(timeStr)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		fmt.Println(res)
+		printRes(time.ToTimestamp(timeStr))
 	},
 }
 
@@ -57,11 +52,6 @@ var timestampCmd = &cobra.Command{
 				timestamp = int64(ts)
 			}
 		}
-		res, err := time.ToDate(timestamp)
-		if err != nil {
-			fmt.Println(err)
-			return
-		}
-		fmt.Println(res)
+		printRes(time.ToDate(timestamp))
 	},
 }
