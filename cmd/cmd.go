@@ -21,6 +21,7 @@ func initAll() {
 	initMd5()
 	initTime()
 	initBase64()
+	initUrl()
 }
 
 func Execute() {
