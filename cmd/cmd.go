@@ -22,6 +22,8 @@ func initAll() {
 	initTime()
 	initBase64()
 	initUrl()
+	initSha()
+	initRand()
 }
 
 func Execute() {
