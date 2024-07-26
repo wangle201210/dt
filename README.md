@@ -20,5 +20,8 @@
 5. rand
 - [x] 随机生成字符串 `dt rand -l 10` echo `f9UyjsHd1Q`
 - [x] 随机生成长度为N的数字 `dt rand -n -l 10` echo `9071824719`
+6. json
+- [x] toml转json `dt json toml demo.toml` echo `... ...`
+- [x] json转struct `dt json struct '{"example":{"from":{"json":true}}}'` echo `... ...` 可以 -f 传文件名
 
 > 组合命令 `dt rand -l 10 | xargs dt md5 | xargs dt base64 -e` echo `YWU1ZTRjOGUzZDAxYjIzM2E2OTlkYzk3OTFmYTA3ZjE=`

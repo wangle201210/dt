@@ -12,7 +12,7 @@ var rootCmd = &cobra.Command{
 	Long: `使用dt，把数据从一种格式转化为另一种数据格式
 比如把string转为md5、date和时间戳互转`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Use dt -h or --help for help.")
+		notify("")
 	},
 }
 
@@ -24,6 +24,7 @@ func initAll() {
 	initUrl()
 	initSha()
 	initRand()
+	initJson()
 }
 
 func Execute() {
@@ -40,4 +41,12 @@ func printRes(data any, err error) {
 		return
 	}
 	fmt.Printf("%+v\n", data)
+}
+
+func notify(cmd string) {
+	if len(cmd) > 0 {
+		fmt.Printf("Use dt %s -h or --help for help.\n", cmd)
+		return
+	}
+	fmt.Printf("Use dt -h or --help for help.\n")
 }
