@@ -1,7 +1,9 @@
 # data-transfer
 数据转换
 ## 安装
-`go install github.com/wangle201210/dt@latest`
+1. 如果有golang环境：`go install github.com/wangle201210/dt@latest`  
+2. 如果有home brew：`brew tap wangle201210/dt` & `brew install dt`  
+3. 在[releases](https://github.com/wangle201210/dt/releases/tag/v0.0.1-alpha)下载可执行文件
 
 ## 功能列表
 1. md5
