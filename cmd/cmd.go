@@ -25,6 +25,7 @@ func initAll() {
 	initSha()
 	initRand()
 	initJson()
+	initDecode()
 }
 
 func Execute() {
