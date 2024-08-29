@@ -18,10 +18,10 @@ var shaCmd = &cobra.Command{
 			shaSrc = args[0]
 		}
 		if shaSafe {
-			printRes(sha.Encode(shaSrc, shaSalt), nil)
+			printRes(sha.EncodeSafe(shaSrc, shaSalt), nil)
 			return
 		}
-		printRes(sha.EncodeSafe(shaSrc, shaSalt), nil)
+		printRes(sha.Encode(shaSrc, shaSalt), nil)
 	},
 }
 
